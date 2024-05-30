@@ -44,7 +44,7 @@ def main() -> int:
             manifest.to_file(args.ref_manifest)
         return 0
 
-    output_dir = BuildOutputDir(manifest.build.filename, args.distribution).dir
+    output_dir = BuildOutputDir(manifest.build.name, args.distribution).dir
 
     if args.incremental:
         buildIncremental = BuildIncremental(manifest, args.distribution)

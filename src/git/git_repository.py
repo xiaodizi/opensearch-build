@@ -49,6 +49,7 @@ class GitRepository:
         self.execute_silent(f"git fetch --depth 1 origin {self.ref}", self.dir)
         self.execute_silent("git checkout FETCH_HEAD", self.dir)
         self.sha = self.output("git rev-parse HEAD", self.dir)
+        # self.execute_silent(f"git submodule update --init --recursive", self.dir)
         logging.info(f"Checked out {self.url}@{self.ref} into {self.dir} at {self.sha}")
 
     @property

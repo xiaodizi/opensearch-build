@@ -53,7 +53,7 @@ class Dist(ABC):
         '''
 
         for file in os.scandir(dest):
-            if self.filename in file.name and file.is_dir():
+            if "RatuDB" in file.name and file.is_dir():
                 self.archive_path = file.path
                 return self.archive_path
 
@@ -66,13 +66,13 @@ class Dist(ABC):
         '''
         current_name = os.path.basename(path)
         target_name = self.min_path
-        if current_name != target_name:
-            logging.info(f"Renaming {path} to {target_name}.")
-            target_path = os.path.join(os.path.dirname(path), target_name)
-            os.rename(path, target_path)
-            return target_path
-        else:
-            return path
+        # if current_name != target_name:
+        #     logging.info(f"Renaming {path} to {target_name}.")
+        #     target_path = os.path.join(os.path.dirname(path), target_name)
+        #     os.rename(path, target_path)
+        #     return target_path
+        # else:
+        return path
 
     def extract(self, dest: str) -> str:
         self.__extract__(dest)

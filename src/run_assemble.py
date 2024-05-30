@@ -27,8 +27,7 @@ def main() -> int:
     build_manifest = BuildManifest.from_file(args.manifest)
     build = build_manifest.build
     artifacts_dir = os.path.dirname(os.path.realpath(args.manifest.name))
-
-    output_dir = AssembleOutputDir(build.filename, build.distribution).dir
+    output_dir = AssembleOutputDir(build.name, build.distribution).dir
 
     logging.info(f"Bundling {build.name} ({build.architecture}) on {build.platform} into {output_dir} ...")
 

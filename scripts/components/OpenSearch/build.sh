@@ -176,7 +176,7 @@ cp distribution/$TYPE/$TARGET/build/distributions/$ARTIFACT_BUILD_NAME "${OUTPUT
 echo "Building core plugins..."
 mkdir -p "${OUTPUT}/core-plugins"
 cd plugins
-../gradlew assemble -Dbuild.snapshot="$SNAPSHOT" -Dbuild.version_qualifier=$QUALIFIER
+./gradlew assemble -Dbuild.snapshot="$SNAPSHOT" -Dbuild.version_qualifier=$QUALIFIER
 cd ..
 for plugin in plugins/*; do
   PLUGIN_NAME=$(basename "$plugin")

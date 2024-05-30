@@ -28,5 +28,5 @@ class Bundles:
 
     @classmethod
     def create(cls, build_manifest: BuildManifest, artifacts_dir: str, bundle_recorder: BundleRecorder, keep: bool) -> Bundle:
-        klass = cls.from_name(build_manifest.build.name)
+        klass = cls.from_name("OpenSearch")
         return klass(build_manifest, artifacts_dir, bundle_recorder, keep)  # type: ignore[no-any-return, operator]

@@ -38,7 +38,7 @@ class BundleRecorder:
 
     def __get_package_name(self, build: BuildManifest.Build) -> str:
         parts = [
-            build.filename,
+            build.name,
             build.version,
             build.platform,
             build.architecture,

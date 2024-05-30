@@ -67,6 +67,7 @@ class Bundle(ABC):
                 ]
             )
         )
+        print(install_command)
         self._execute(install_command)
 
     def install_components(self) -> None:
@@ -139,5 +140,6 @@ class Bundle(ABC):
         min_dist = Dists.create_dist(self.min_bundle.name, min_dist_path, min_path, self.build)
         logging.info(f"Extracting dist into {self.tmp_dir.name}.")
         min_dist.extract(self.tmp_dir.name)
+
         logging.info(f"Extracted dist into {self.tmp_dir.name}.")
         return min_dist

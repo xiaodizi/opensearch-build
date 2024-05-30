@@ -78,6 +78,8 @@ class ScriptFinder:
             os.path.realpath(os.path.join(cls.component_scripts_path, component_name, "install.sh")),
             os.path.realpath(os.path.join(cls.default_scripts_path, "install.sh")),
         ]
+        if component_name == "RatuDB":
+            return os.path.realpath(os.path.join(cls.component_scripts_path, "Opensearch", "install.sh"))
 
         return cls.__find_script("install.sh", paths)
 

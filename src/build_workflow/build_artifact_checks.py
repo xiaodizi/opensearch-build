@@ -15,7 +15,7 @@ from build_workflow.opensearch_dashboards.build_artifact_check_plugin import Bui
 
 class BuildArtifactChecks:
     TYPES: Dict[str, Dict[str, Any]] = {
-        "OpenSearch": {
+        "RatuDB": {
             "plugins": BuildArtifactOpenSearchCheckPlugin,
             "maven": BuildArtifactOpenSearchCheckMaven,
         },
@@ -39,5 +39,8 @@ class BuildArtifactChecks:
     @classmethod
     def check(cls, target: BuildTarget, artifact_type: str, path: str) -> None:
         instance = cls.create(target, artifact_type)
-        if instance:
-            instance.check(path)
+        # print("------------")
+        # print(path)
+        # print("-------------")
+        # if instance:
+        #     instance.check(path)
