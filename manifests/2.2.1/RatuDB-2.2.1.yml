@@ -34,7 +34,7 @@ components:
       - gradle:dependencies:'2.2.1-SNAPSHOT'
   - name: k-nn
     repository: git@github.com:xiaodizi/k-NN.git
-    ref: l_dev
+    ref: main
     platforms:
       - darwin
       - linux
