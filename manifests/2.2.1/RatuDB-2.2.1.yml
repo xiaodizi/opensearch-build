@@ -33,8 +33,8 @@ components:
 #      - gradle:properties:'2.2.1-SNAPSHOT'
 #      - gradle:dependencies:'2.2.1-SNAPSHOT'
   - name: k-nn
-    repository: ssh://git@gitlab.ratu.ltd:30022/operation-ratudb/k-nn.git
-    ref: master
+    repository: git@github.com:xiaodizi/k-NN.git
+    ref: l_dev
     platforms:
       - darwin
       - linux
